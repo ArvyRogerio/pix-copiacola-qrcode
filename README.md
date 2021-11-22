@@ -29,3 +29,9 @@ Parâmetros obrigatórios:
  Veja o arquivo "exemplo.php" para um exemplo funcional
  
  Desenvolvido por Rogério Vitiello - www.arvy.com.br 
+
+-------------
+
+**Se meu código ajudou você de alguma forma, poderia me pagar o cafezinho de 5 reais que está no exemplo.php, né? :)**
+
+![qr](https://user-images.githubusercontent.com/11563884/142944206-dde81e3b-aa9a-4bce-b3fd-b211800a2b24.png)
