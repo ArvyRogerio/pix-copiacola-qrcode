@@ -1,0 +1,1 @@
+# pix-copiacola-qrcode
