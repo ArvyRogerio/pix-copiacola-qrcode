@@ -82,4 +82,17 @@ function GeraQRCode($S) {
    $options=new QROptions(['eccLevel'=>QRCode::ECC_L,'outputType'=>QRCode::OUTPUT_MARKUP_SVG,'version'=>-1]);
    return (new QRCode($options))->render($S);
 }
+
+//Variação da versão original, com mais recursos: remove a "quiet zone" (área ao redor), e permite especificar a cor base (markup dark) em formato RGB.
+//A função retorna um Array com 2 parâmetros: 1) o QRCode em base 64 (igual a original); 2) o tamanho em pixels do QRCode, o "tamanho mínimo".
+//Use o segundo parâmetro como width/height e, para tamanhos maiores, use sempre um múltiplo dele, para melhor resultado visual.
+//Exemplo:
+//$QR=GeraQRCodeTamanho('codigo-copia-e-cola');
+//echo '<IMG SRC="'.$QR[0].'" STYLE="width:'.($QR[1]*5).'px;height:'.($QR[1]*5).'px">';
+//Assim você terá o QRCode com 5 vezes o tamanho mínimo, com a melhor qualidade visual possível.
+
+function GeraQRCodeTamanho($S) {
+   $qrcode=(new QRCode(new QROptions(['eccLevel'=>QRCode::ECC_L,'outputType'=>QRCode::OUTPUT_MARKUP_SVG,'addQuietzone'=>false,'markupDark'=>'#000','markupLight'=>'transparent','version'=>-1])));
+   return array($qrcode->render($S),count($qrcode->getMatrix($S)->matrix()));
+}
 ?>
