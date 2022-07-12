@@ -22,6 +22,8 @@ Parâmetros obrigatórios:
 
 Função GeraQRCode(): recebe a linha gerada no Copia e Cola e transforma em QRCode, retornando a imagem em Base64 para dar "echo" direto no "src" da tag html "img"
 
+Função GeraQRCodeTamanho(): variação que recebe a linha gerada no Copia e Cola e retorna um Array() com 2 parâmetros, com o QRCode em Base64 (igual a função original) e o tamanho "mínimo" do QRCode, que você pode multiplicar por um número inteiro e passar no width/height (px) para obter um resultado visual melhor.
+
 Parâmetros obrigatórios:
 
  - $S: string gerada pela função GeraCopiaCola()
